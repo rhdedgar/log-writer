@@ -8,7 +8,7 @@ if [ "$OO_PAUSE_ON_START" = "true" ] ; then
   echo "This container's startup has been paused indefinitely because OO_PAUSE_ON_START has been set."
   echo
   while true; do
-    sleep 10    
+    sleep 10
   done
 fi
 
@@ -17,12 +17,10 @@ echo
 echo '/usr/bin/log-writer'
 echo
 echo '/usr/local/bin/clean.sh'
-
-
 echo
 echo 'Every 12 hours, clean up pod log dirs that are older than 30 days.'
 echo '----------------'
-/usr/local/bin/loop.sh 43200 /usr/local/bin/clean.sh & 
+/usr/local/bin/loop.sh 43200 /usr/local/bin/clean.sh &
 echo
 echo 'Always listen for pod logs from pod-logger pods.'
 echo '----------------'
