@@ -24,4 +24,4 @@ echo '----------------'
 echo
 echo 'Always listen for pod logs from pod-logger pods.'
 echo '----------------'
-/usr/bin/log-writer
+/bin/log-writer
